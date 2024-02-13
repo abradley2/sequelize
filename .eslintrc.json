@@ -10,22 +10,6 @@
     "mocha/no-exclusive-tests": "error",
     "mocha/no-skipped-tests": "warn",
 
-    "jsdoc/check-param-names": "error",
-    "jsdoc/check-tag-names": "error",
-    "jsdoc/check-types": "off",
-    "jsdoc/newline-after-description": "error",
-    "jsdoc/no-undefined-types": "off",
-    "jsdoc/require-description-complete-sentence": "off",
-    "jsdoc/require-example": "off",
-    "jsdoc/require-hyphen-before-param-description": "off",
-    "jsdoc/require-param": "error",
-    "jsdoc/require-param-description": "off",
-    "jsdoc/require-param-name": "error",
-    "jsdoc/require-param-type": "off",
-    "jsdoc/require-returns-description": "off",
-    "jsdoc/require-returns-type": "off",
-    "jsdoc/valid-types": "error",
-
     // style
     "array-bracket-spacing": "error",
     "comma-spacing": "error",
@@ -130,7 +114,7 @@
     "sourceType": "script"
   },
   "ignorePatterns": ["lib/**/*", "types/**/*", "test/types/**/*", "src/**/*.d.ts"],
-  "plugins": ["mocha", "jsdoc", "@typescript-eslint"],
+  "plugins": ["mocha", "@typescript-eslint"],
   "env": {
     "node": true,
     "mocha": true,
