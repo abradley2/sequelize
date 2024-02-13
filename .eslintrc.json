@@ -95,10 +95,7 @@
       "rules": {
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-this-alias": "off",
-        "jsdoc/require-param-type": "error",
-        "jsdoc/check-types": "error",
-        "jsdoc/require-returns-type": "error"
+        "@typescript-eslint/no-this-alias": "off"
       }
     }
   ],

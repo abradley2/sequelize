@@ -2557,6 +2557,10 @@ class Model {
     const createdAtAttr = this._timestampAttributes.createdAt;
     const updatedAtAttr = this._timestampAttributes.updatedAt;
     const hasPrimary = this.primaryKeyField in values || this.primaryKeyAttribute in values;
+    if (options.hooks) {
+      await this.runHooks('beforeUpsert', values, options);
+    }
+
     const instance = this.build(values);
 
     options.model = this;
@@ -2600,9 +2604,6 @@ class Model {
       delete updateValues[this.primaryKeyField];
     }
 
-    if (options.hooks) {
-      await this.runHooks('beforeUpsert', values, options);
-    }
     const result = await this.queryInterface.upsert(this.getTableName(options), insertValues, updateValues, instance.where(), options);
 
     const [record] = result;
